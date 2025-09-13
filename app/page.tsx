@@ -1,8 +1,8 @@
 
 "use client";
 
-import { LoginForm } from "@/components/login-form";
-import { UserProfile } from "@/components/user-profile";
+import { LoginForm } from "@/components/auth/login-form";
+import { UserProfile } from "@/components/auth/user-profile";
 import { useAuth } from "@/hooks/useAuth";
 import { CONTACT_INFO } from "@/lib/constants";
 

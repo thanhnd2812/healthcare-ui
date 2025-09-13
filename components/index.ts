@@ -1,30 +1,35 @@
-export { ArticleCard } from "./article-card";
-export { ArticlesGrid } from "./articles-grid";
-export { CategoryCard } from "./category-card";
-export { Footer } from "./footer";
-export { LoginForm } from "./login-form";
-export { Logo } from "./logo";
-export { MobileMenu } from "./mobile-menu";
-export { NavigationHeader } from "./navigation-header";
-export { NavigationItems } from "./navigation-items";
-export type { NavigationItem } from "./navigation-items";
-export { ProtectedRoute } from "./protected-route";
-export { RecommendedCategories } from "./recommended-categories";
-export { ScrollToTop } from "./scroll-to-top";
-export { UserProfile } from "./user-profile";
+// Layout components
+export { Footer } from "./layout/footer";
+export { Logo } from "./layout/logo";
+export { MobileMenu } from "./layout/mobile-menu";
+export { NavigationHeader } from "./layout/navigation-header";
+export { NavigationItems } from "./layout/navigation-items";
+export type { NavigationItem } from "./layout/navigation-items";
+export { ScrollToTop } from "./layout/scroll-to-top";
+
+// Auth components
+export { LoginForm } from "./auth/login-form";
+export { ProtectedRoute } from "./auth/protected-route";
+export { UserProfile } from "./auth/user-profile";
+
+// Landing page components
+export { ArticleCard } from "./landing/article-card";
+export { ArticlesGrid } from "./landing/articles-grid";
+export { CategoryCard } from "./landing/category-card";
+export { RecommendedCategories } from "./landing/recommended-categories";
+
+// My Page components
+export { FoodDiarySection } from "./my-page/food-diary-section";
+export { HeroSection } from "./my-page/hero-section";
+export { MealTrackingSection } from "./my-page/meal-tracking-section";
+export { ViewMoreButton } from "./my-page/view-more-button";
+
+// Record page components
+export { BodyRecordGraph } from "./record/body-record-graph";
+export { DiarySection } from "./record/diary-section";
+export { ExerciseRecordSection } from "./record/exercise-record-section";
+export { RecordSectionButtons } from "./record/record-section-buttons";
 
 // UI components
 export { GradientButton } from "./ui/gradient-button";
-
-// Record page components
-export { BodyRecordGraph } from "./body-record-graph";
-export { DiarySection } from "./diary-section";
-export { ExerciseRecordSection } from "./exercise-record-section";
-export { RecordSectionButtons } from "./record-section-buttons";
-
-// My Page components
-export { FoodDiarySection } from "./food-diary-section";
-export { HeroSection } from "./hero-section";
-export { MealTrackingSection } from "./meal-tracking-section";
-export { ViewMoreButton } from "./view-more-button";
 

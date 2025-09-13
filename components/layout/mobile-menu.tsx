@@ -4,7 +4,7 @@ import { useMobileMenu } from "@/hooks";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 interface MobileMenuProps {
   isOpen: boolean;

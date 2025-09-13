@@ -1,6 +1,6 @@
 'use client';
 
-import { GradientButton } from './ui/gradient-button';
+import { GradientButton } from '../ui/gradient-button';
 
 interface ViewMoreButtonProps {
   onClick?: () => void;

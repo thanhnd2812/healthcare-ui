@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { Button } from "../ui/button";
 import { Logo } from "./logo";
 import { MobileMenu } from "./mobile-menu";
 import { NavigationItems } from "./navigation-items";
-import { Button } from "./ui/button";
 
 export function NavigationHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

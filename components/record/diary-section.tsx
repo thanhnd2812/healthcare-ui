@@ -1,7 +1,7 @@
 'use client';
 
-import { GradientButton } from '@/components/ui/gradient-button';
 import { DIARY_ENTRIES } from '@/lib/constants';
+import { GradientButton } from '../ui/gradient-button';
 
 interface DiarySectionProps {
   id?: string;

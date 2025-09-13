@@ -1,10 +1,10 @@
 
 'use client';
 
-import { FoodDiarySection } from '@/components/food-diary-section';
-import { HeroSection } from '@/components/hero-section';
-import { MealTrackingSection } from '@/components/meal-tracking-section';
-import { ViewMoreButton } from '@/components/view-more-button';
+import { FoodDiarySection } from '@/components/my-page/food-diary-section';
+import { HeroSection } from '@/components/my-page/hero-section';
+import { MealTrackingSection } from '@/components/my-page/meal-tracking-section';
+import { ViewMoreButton } from '@/components/my-page/view-more-button';
 
 const MyPage = () => {
   const handleViewMoreRecords = () => {

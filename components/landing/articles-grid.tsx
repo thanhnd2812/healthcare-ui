@@ -1,7 +1,7 @@
 "use client";
 import { useArticles } from "@/hooks";
+import { GradientButton } from "../ui/gradient-button";
 import { ArticleCard } from "./article-card";
-import { GradientButton } from "./ui/gradient-button";
 
 interface ArticlesGridProps {
   category?: string;

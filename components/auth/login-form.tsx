@@ -3,7 +3,7 @@
 import { useAuth } from '@/hooks/useAuth';
 import { AUTH_CREDENTIALS } from '@/lib/constants';
 import { useState } from 'react';
-import { Button } from './ui/button';
+import { Button } from '../ui/button';
 
 interface LoginFormProps {
   onSuccess?: () => void;

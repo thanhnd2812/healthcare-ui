@@ -1,7 +1,7 @@
 "use client";
 
 import { useAuth } from '@/hooks/useAuth';
-import { Button } from './ui/button';
+import { Button } from '../ui/button';
 
 interface UserProfileProps {
   className?: string;

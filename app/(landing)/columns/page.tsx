@@ -1,6 +1,6 @@
 
-import { ArticlesGrid } from "@/components/articles-grid";
-import { RecommendedCategories } from "@/components/recommended-categories";
+import { ArticlesGrid } from "@/components/landing/articles-grid";
+import { RecommendedCategories } from "@/components/landing/recommended-categories";
 
 const ColumnsPage = () => {
   return (
