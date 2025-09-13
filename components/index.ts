@@ -22,3 +22,9 @@ export { DiarySection } from "./diary-section";
 export { ExerciseRecordSection } from "./exercise-record-section";
 export { RecordSectionButtons } from "./record-section-buttons";
 
+// My Page components
+export { FoodDiarySection } from "./food-diary-section";
+export { HeroSection } from "./hero-section";
+export { MealTrackingSection } from "./meal-tracking-section";
+export { ViewMoreButton } from "./view-more-button";
+

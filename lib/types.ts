@@ -68,3 +68,20 @@ export interface DiaryEntry {
   title: string;
   content: string;
 }
+
+// Meal tracking types
+export interface MealType {
+  id: string;
+  name: string;
+  icon: string;
+  completed?: boolean;
+}
+
+export interface FoodDiaryEntry {
+  id: string;
+  date: string;
+  time: string;
+  mealType: 'morning' | 'lunch' | 'dinner' | 'snack';
+  image: string;
+  title?: string;
+}

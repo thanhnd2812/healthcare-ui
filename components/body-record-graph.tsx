@@ -9,7 +9,7 @@ interface BodyRecordGraphProps {
 
 export function BodyRecordGraph({ id }: BodyRecordGraphProps) {
   return (
-    <section id={id} className="bg-gray-800 text-white p-6 rounded-lg mb-14">
+    <section id={id} className="bg-gray-800 text-white p-6 mb-14">
       <div className="flex items-center mb-6">
         <div className="text-sm font-medium mr-4">
           BODY<br />RECORD

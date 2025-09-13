@@ -1,4 +1,4 @@
-import type { Article, BodyRecordData, Category, DiaryEntry, ExerciseRecord, FooterLink, MenuItem, NavigationItem, RecordSectionButton } from './types';
+import type { Article, BodyRecordData, Category, DiaryEntry, ExerciseRecord, FoodDiaryEntry, FooterLink, MealType, MenuItem, NavigationItem, RecordSectionButton } from './types';
 
 // Navigation constants
 export const NAVIGATION_ITEMS: NavigationItem[] = [
@@ -292,5 +292,101 @@ export const DIARY_ENTRIES: DiaryEntry[] = [
     time: "23:25",
     title: "私の日記の記録が一日の要約として記録されます",
     content: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
+  },
+] as const;
+
+// Meal tracking constants
+export const MEAL_TYPES: MealType[] = [
+  {
+    id: "morning",
+    name: "Morning",
+    icon: "icon_knife",
+    completed: false,
+  },
+  {
+    id: "lunch", 
+    name: "Lunch",
+    icon: "icon_knife",
+    completed: false,
+  },
+  {
+    id: "dinner",
+    name: "Dinner", 
+    icon: "icon_knife",
+    completed: false,
+  },
+  {
+    id: "snack",
+    name: "Snack",
+    icon: "icon_cup",
+    completed: false,
+  },
+] as const;
+
+// Food diary mock data
+export const FOOD_DIARY_ENTRIES: FoodDiaryEntry[] = [
+  {
+    id: "1",
+    date: "05.21",
+    time: "Morning",
+    mealType: "morning",
+    image: "/images/m01.jpg",
+    title: "サンドイッチとサラダ"
+  },
+  {
+    id: "2", 
+    date: "05.21",
+    time: "Lunch",
+    mealType: "lunch",
+    image: "/images/l01.jpg",
+    title: "お弁当"
+  },
+  {
+    id: "3",
+    date: "05.21",
+    time: "Dinner", 
+    mealType: "dinner",
+    image: "/images/d01.jpg",
+    title: "和食定食"
+  },
+  {
+    id: "4",
+    date: "05.21",
+    time: "Snack",
+    mealType: "snack", 
+    image: "/images/s01.jpg",
+    title: "ケーキ"
+  },
+  {
+    id: "5",
+    date: "05.20",
+    time: "Morning",
+    mealType: "morning",
+    image: "/images/m02.jpg",
+    title: "パンケーキ"
+  },
+  {
+    id: "6",
+    date: "05.20", 
+    time: "Lunch",
+    mealType: "lunch",
+    image: "/images/l02.jpg",
+    title: "パスタ"
+  },
+  {
+    id: "7",
+    date: "05.20",
+    time: "Dinner",
+    mealType: "dinner", 
+    image: "/images/d02.jpg",
+    title: "ステーキ"
+  },
+  {
+    id: "8",
+    date: "05.20",
+    time: "Snack",
+    mealType: "snack",
+    image: "/images/m03.jpg", 
+    title: "フルーツ"
   },
 ] as const;
