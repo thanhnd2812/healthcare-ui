@@ -9,7 +9,7 @@ interface ArticlesGridProps {
 }
 
 export function ArticlesGrid({ category, search }: ArticlesGridProps = {}) {
-  const { articles, loading, error, hasMore, loadMore, totalCount } = useArticles({
+  const { articles, loading, error, loadMore } = useArticles({
     category,
     search,
   });
