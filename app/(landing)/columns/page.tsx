@@ -1,5 +1,5 @@
 
-import { ColumnsGrid } from "@/components/columns-grid";
+import { ArticlesGrid } from "@/components/articles-grid";
 import { RecommendedCategories } from "@/components/recommended-categories";
 
 const ColumnsPage = () => {
@@ -10,7 +10,7 @@ const ColumnsPage = () => {
         <RecommendedCategories />
         
         {/* Columns Grid */}
-        <ColumnsGrid />
+        <ArticlesGrid />
       </div>
     </main>
   );

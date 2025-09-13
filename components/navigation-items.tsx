@@ -1,32 +1,8 @@
+import { useNavigation } from "@/hooks";
+import type { NavigationItem } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-
-export interface NavigationItem {
-  href: string;
-  label: string;
-  icon?: string;
-  badge?: number;
-}
-
-const navigationItems: NavigationItem[] = [
-  {
-    href: "/record",
-    label: "自分の記録",
-    icon: "/images/icon_memo.png",
-  },
-  {
-    href: "/challenge",
-    label: "チャレンジ",
-    icon: "/images/icon_challenge.png",
-  },
-  {
-    href: "/notifications",
-    label: "お知らせ",
-    icon: "/images/icon_info.png",
-    badge: 1,
-  },
-];
 
 interface NavigationItemsProps {
   className?: string;
@@ -35,6 +11,24 @@ interface NavigationItemsProps {
 }
 
 export function NavigationItems({ className, isMobile = false, onItemClick }: NavigationItemsProps) {
+  const { navigationItems, loading, error } = useNavigation();
+
+  if (loading) {
+    return (
+      <nav className={cn("flex", isMobile ? "flex-col space-y-4" : "items-center space-x-8", className)}>
+        <div className="animate-pulse">Loading...</div>
+      </nav>
+    );
+  }
+
+  if (error) {
+    return (
+      <nav className={cn("flex", isMobile ? "flex-col space-y-4" : "items-center space-x-8", className)}>
+        <div className="text-red-500 text-sm">Error loading navigation</div>
+      </nav>
+    );
+  }
+
   return (
     <nav className={cn("flex", isMobile ? "flex-col space-y-4" : "items-center space-x-8", className)}>
       {navigationItems.map((item) => (
@@ -72,4 +66,5 @@ export function NavigationItems({ className, isMobile = false, onItemClick }: Na
   );
 }
 
-export { navigationItems };
+// Export types for external use
+export type { NavigationItem };

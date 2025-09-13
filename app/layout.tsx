@@ -1,5 +1,6 @@
 import { Footer } from "@/components/footer";
 import { NavigationHeader } from "@/components/navigation-header";
+import { ScrollToTop } from "@/components/scroll-to-top";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -28,6 +29,7 @@ export default function RootLayout({
         <NavigationHeader />
         {children}
         <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );

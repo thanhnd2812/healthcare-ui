@@ -27,7 +27,7 @@ export function ArticleCard({
     <Link href={`/columns/${id}`} className={cn("block group", className)}>
       <article className="bg-white overflow-hidden transition-transform group-hover:scale-[1.02]">
         {/* Image with date overlay */}
-        <div className="relative h-[144px]">
+        <div className="relative h-48">
           <Image
             src={image}
             alt={title}

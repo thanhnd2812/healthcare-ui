@@ -1,5 +1,6 @@
 "use client";
 
+import { useMobileMenu } from "@/hooks";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { Button } from "./ui/button";
@@ -9,16 +10,9 @@ interface MobileMenuProps {
   onClose: () => void;
 }
 
-const menuItems = [
-  { href: "/record", label: "自分の記録" },
-  { href: "/weight-graph", label: "体重グラフ" },
-  { href: "/goals", label: "目標" },
-  { href: "/selected-course", label: "選択中のコース" },
-  { href: "/columns", label: "コラム一覧" },
-  { href: "/settings", label: "設定" },
-];
-
 export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+  const { menuItems, loading, error } = useMobileMenu();
+
   if (!isOpen) return null;
 
   return (
@@ -56,18 +50,28 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
         {/* Menu Items */}
         <nav className="px-6 py-4">
-          <div className="space-y-4">
-            {menuItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="block text-white hover:text-orange-300 transition-colors py-4 border-b border-gray-600 last:border-b-0"
-                onClick={onClose}
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
+          {loading ? (
+            <div className="text-white text-center py-8">
+              <div className="animate-pulse">Loading menu...</div>
+            </div>
+          ) : error ? (
+            <div className="text-red-300 text-center py-8">
+              <div>Error loading menu</div>
+            </div>
+          ) : (
+            <div className="space-y-4">
+              {menuItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="block text-white hover:text-orange-300 transition-colors py-4 border-b border-gray-600 last:border-b-0"
+                  onClick={onClose}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          )}
         </nav>
       </div>
     </>
