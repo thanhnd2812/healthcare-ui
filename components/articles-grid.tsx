@@ -1,7 +1,7 @@
 "use client";
 import { useArticles } from "@/hooks";
 import { ArticleCard } from "./article-card";
-import { Button } from "./ui/button";
+import { GradientButton } from "./ui/gradient-button";
 
 interface ArticlesGridProps {
   category?: string;
@@ -61,13 +61,12 @@ export function ArticlesGrid({ category, search }: ArticlesGridProps = {}) {
 
       {true && (
         <div className="flex justify-center">
-          <Button 
+          <GradientButton 
             onClick={loadMore}
-            disabled={loading}
-            className="bg-gradient-to-t from-[#FFCC21] to-[#FF963C] text-white px-16 py-3 rounded-md font-light text-base h-14 hover:from-[#cfa313] hover:to-[#FF963C] disabled:opacity-50"
+            loading={loading}
           >
-            {loading ? "読み込み中..." : "コラムをもっと見る"}
-          </Button>
+            コラムをもっと見る
+          </GradientButton>
         </div>
       )}
 

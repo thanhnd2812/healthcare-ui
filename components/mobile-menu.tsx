@@ -3,6 +3,7 @@
 import { useMobileMenu } from "@/hooks";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Button } from "./ui/button";
 
 interface MobileMenuProps {
@@ -12,6 +13,7 @@ interface MobileMenuProps {
 
 export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const { menuItems, loading, error } = useMobileMenu();
+  const pathname = usePathname();
 
   if (!isOpen) return null;
 
@@ -60,16 +62,25 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             </div>
           ) : (
             <div className="space-y-4">
-              {menuItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="block text-white hover:text-orange-300 transition-colors py-4 border-b border-gray-600 last:border-b-0"
-                  onClick={onClose}
-                >
-                  {item.label}
-                </a>
-              ))}
+              {menuItems.map((item) => {
+                const isActive = pathname === item.href;
+                
+                return (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className={cn(
+                      "block transition-colors py-4 border-b border-gray-600 last:border-b-0",
+                      isActive 
+                        ? "text-orange-400 font-medium" 
+                        : "text-white hover:text-orange-300"
+                    )}
+                    onClick={onClose}
+                  >
+                    {item.label}
+                  </a>
+                );
+              })}
             </div>
           )}
         </nav>

@@ -1,4 +1,4 @@
-import type { Article, Category, FooterLink, MenuItem, NavigationItem } from './types';
+import type { Article, BodyRecordData, Category, DiaryEntry, ExerciseRecord, FooterLink, MenuItem, NavigationItem, RecordSectionButton } from './types';
 
 // Navigation constants
 export const NAVIGATION_ITEMS: NavigationItem[] = [
@@ -173,3 +173,124 @@ export const AUTH_CREDENTIALS = {
   username: "admin",
   password: "password123",
 } as const;
+
+// Record page constants
+export const RECORD_SECTION_BUTTONS: RecordSectionButton[] = [
+  {
+    id: "body-record",
+    title: "BODY RECORD",
+    subtitle: "自分のカラダの記録",
+    image: "/images/MyRecommend-1.jpg",
+    targetSection: "graph",
+  },
+  {
+    id: "my-exercise",
+    title: "MY EXERCISE",
+    subtitle: "自分の運動の記録",
+    image: "/images/MyRecommend-2.jpg",
+    targetSection: "exercise",
+  },
+  {
+    id: "my-diary",
+    title: "MY DIARY",
+    subtitle: "自分の日記",
+    image: "/images/MyRecommend-3.jpg",
+    targetSection: "diary",
+  },
+] as const;
+
+// Body record mock data for graph
+export const BODY_RECORD_DATA: BodyRecordData[] = [
+  { date: "6月", weight: 75, bodyFat: 22 },
+  { date: "7月", weight: 73, bodyFat: 21 },
+  { date: "8月", weight: 71, bodyFat: 20 },
+  { date: "9月", weight: 72, bodyFat: 21 },
+  { date: "10月", weight: 70, bodyFat: 19 },
+  { date: "11月", weight: 68, bodyFat: 18 },
+  { date: "12月", weight: 67, bodyFat: 17 },
+  { date: "1月", weight: 66, bodyFat: 16 },
+  { date: "2月", weight: 65, bodyFat: 15 },
+  { date: "3月", weight: 64, bodyFat: 14 },
+  { date: "4月", weight: 63, bodyFat: 13 },
+  { date: "5月", weight: 62, bodyFat: 12 },
+] as const;
+
+// Exercise records mock data
+export const EXERCISE_RECORDS: ExerciseRecord[] = [
+  { id: "1", name: "家事全般（立位・軽い）", calories: 26, duration: 10, type: "cardio" },
+  { id: "2", name: "家事全般（立位・軽い）", calories: 26, duration: 10, type: "cardio" },
+  { id: "3", name: "家事全般（立位・軽い）", calories: 26, duration: 10, type: "cardio" },
+  { id: "4", name: "家事全般（立位・軽い）", calories: 26, duration: 10, type: "cardio" },
+  { id: "5", name: "家事全般（立位・軽い）", calories: 26, duration: 10, type: "cardio" },
+  { id: "6", name: "家事全般（立位・軽い）", calories: 26, duration: 10, type: "cardio" },
+  { id: "7", name: "家事全般（立位・軽い）", calories: 26, duration: 10, type: "cardio" },
+  { id: "8", name: "家事全般（立位・軽い）", calories: 26, duration: 10, type: "cardio" },
+  { id: "9", name: "家事全般（立位・軽い）", calories: 26, duration: 10, type: "cardio" },
+  { id: "10", name: "家事全般（立位・軽い）", calories: 26, duration: 10, type: "cardio" },
+  { id: "11", name: "家事全般（立位・軽い）", calories: 26, duration: 10, type: "cardio" },
+  { id: "12", name: "家事全般（立位・軽い）", calories: 26, duration: 10, type: "cardio" },
+  { id: "13", name: "家事全般（立位・軽い）", calories: 26, duration: 10, type: "cardio" },
+  { id: "14", name: "家事全般（立位・軽い）", calories: 26, duration: 10, type: "cardio" },
+  { id: "15", name: "家事全般（立位・軽い）", calories: 26, duration: 10, type: "cardio" },
+  { id: "16", name: "家事全般（立位・軽い）", calories: 26, duration: 10, type: "cardio" },
+] as const;
+
+// Diary entries mock data
+export const DIARY_ENTRIES: DiaryEntry[] = [
+  {
+    id: "1",
+    date: "2021.05.21",
+    time: "23:25",
+    title: "私の日記の記録が一日の要約として記録されます",
+    content: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
+  },
+  {
+    id: "2",
+    date: "2021.05.21",
+    time: "23:25",
+    title: "私の日記の記録が一日の要約として記録されます",
+    content: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
+  },
+  {
+    id: "3",
+    date: "2021.05.21",
+    time: "23:25",
+    title: "私の日記の記録が一日の要約として記録されます",
+    content: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
+  },
+  {
+    id: "4",
+    date: "2021.05.21",
+    time: "23:25",
+    title: "私の日記の記録が一日の要約として記録されます",
+    content: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
+  },
+  {
+    id: "5",
+    date: "2021.05.21",
+    time: "23:25",
+    title: "私の日記の記録が一日の要約として記録されます",
+    content: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
+  },
+  {
+    id: "6",
+    date: "2021.05.21",
+    time: "23:25",
+    title: "私の日記の記録が一日の要約として記録されます",
+    content: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
+  },
+  {
+    id: "7",
+    date: "2021.05.21",
+    time: "23:25",
+    title: "私の日記の記録が一日の要約として記録されます",
+    content: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
+  },
+  {
+    id: "8",
+    date: "2021.05.21",
+    time: "23:25",
+    title: "私の日記の記録が一日の要約として記録されます",
+    content: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
+  },
+] as const;

@@ -13,3 +13,12 @@ export { RecommendedCategories } from "./recommended-categories";
 export { ScrollToTop } from "./scroll-to-top";
 export { UserProfile } from "./user-profile";
 
+// UI components
+export { GradientButton } from "./ui/gradient-button";
+
+// Record page components
+export { BodyRecordGraph } from "./body-record-graph";
+export { DiarySection } from "./diary-section";
+export { ExerciseRecordSection } from "./exercise-record-section";
+export { RecordSectionButtons } from "./record-section-buttons";
+

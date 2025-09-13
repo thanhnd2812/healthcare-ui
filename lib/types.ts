@@ -37,3 +37,34 @@ export interface MenuItem {
   href: string;
   label: string;
 }
+
+// Record page types
+export interface RecordSectionButton {
+  id: string;
+  title: string;
+  subtitle: string;
+  image: string;
+  targetSection: string;
+}
+
+export interface BodyRecordData {
+  date: string;
+  weight: number;
+  bodyFat: number;
+}
+
+export interface ExerciseRecord {
+  id: string;
+  name: string;
+  calories: number;
+  duration: number; // in minutes
+  type: 'cardio' | 'strength' | 'flexibility';
+}
+
+export interface DiaryEntry {
+  id: string;
+  date: string;
+  time: string;
+  title: string;
+  content: string;
+}
