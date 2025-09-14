@@ -1,4 +1,5 @@
 import { ProtectedRoute } from "@/components/auth/protected-route";
+import { ErrorBoundary } from "@/components/error-boundary";
 
 export default function DashboardLayout({
   children,
@@ -7,7 +8,9 @@ export default function DashboardLayout({
 }) {
   return (
     <ProtectedRoute>
-      {children}
+      <ErrorBoundary>
+        {children}
+      </ErrorBoundary>
     </ProtectedRoute>
   );
 }

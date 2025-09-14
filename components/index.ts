@@ -34,3 +34,6 @@ export { RecordSectionButtons } from "./record/record-section-buttons";
 // UI components
 export { GradientButton } from "./ui/gradient-button";
 
+// Error handling
+export { ErrorBoundary, useErrorHandler, withErrorBoundary } from "./error-boundary";
+
