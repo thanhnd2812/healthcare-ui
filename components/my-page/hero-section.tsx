@@ -1,6 +1,6 @@
 'use client';
 
-import { BodyRecordGraph } from '../record/body-record-graph';
+import { BodyRecordGraph } from '@/components/record/body-record-graph';
 
 export function HeroSection() {
   return (

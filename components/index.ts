@@ -21,6 +21,7 @@ export { RecommendedCategories } from "./landing/recommended-categories";
 // My Page components
 export { FoodDiarySection } from "./my-page/food-diary-section";
 export { HeroSection } from "./my-page/hero-section";
+export { HexagonalMealCard } from "./my-page/hexagonal-meal-card";
 export { MealTrackingSection } from "./my-page/meal-tracking-section";
 export { ViewMoreButton } from "./my-page/view-more-button";
 

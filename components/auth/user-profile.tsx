@@ -1,6 +1,7 @@
 "use client";
 
 import { useAuth } from '@/hooks/useAuth';
+import Link from 'next/link';
 import { Button } from '../ui/button';
 
 interface UserProfileProps {
@@ -33,10 +34,11 @@ export function UserProfile({ className }: UserProfileProps) {
       <div className="space-y-4">
         <div className="bg-green-50 border border-green-200 rounded-md p-3">
           <div className="flex items-center">
-            <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-            <span className="text-green-700 text-sm font-medium">
-              Successfully authenticated
-            </span>
+            <Link href="/my-page" className='w-full'>
+              <div className="text-green-700 text-sm font-bold text-center">
+              Go to My Page
+              </div>
+            </Link>
           </div>
         </div>
 

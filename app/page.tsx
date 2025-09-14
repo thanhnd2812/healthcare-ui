@@ -5,6 +5,7 @@ import { LoginForm } from "@/components/auth/login-form";
 import { UserProfile } from "@/components/auth/user-profile";
 import { useAuth } from "@/hooks/useAuth";
 import { CONTACT_INFO } from "@/lib/constants";
+import { redirect } from "next/navigation";
 
 export default function Home() {
   const { isAuthenticated } = useAuth();
@@ -53,7 +54,11 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <LoginForm />
+                <LoginForm
+                  onSuccess={() => {
+                    redirect("/my-page");
+                  }}
+                />
             </>
 
           )}
