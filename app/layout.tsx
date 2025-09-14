@@ -1,3 +1,4 @@
+import { ErrorBoundary } from "@/components/error-boundary";
 import { Footer } from "@/components/layout/footer";
 import { NavigationHeader } from "@/components/layout/navigation-header";
 import { ScrollToTop } from "@/components/layout/scroll-to-top";
@@ -26,10 +27,14 @@ export default function RootLayout({
       <body
         className={`${hiragino.variable} antialiased`}
       >
-        <NavigationHeader />
-        {children}
-        <Footer />
-        <ScrollToTop />
+        <ErrorBoundary 
+          showErrorDetails={process.env.NODE_ENV === 'development'}
+        >
+          <NavigationHeader />
+          {children}
+          <Footer />
+          <ScrollToTop />
+        </ErrorBoundary>
       </body>
     </html>
   );
